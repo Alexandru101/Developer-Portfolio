@@ -26,19 +26,19 @@ function Contact() {
             });
 
             const data = await response.json();
-            console.warn(data);
+            if (data.success) {
+                setFullName("");
+                setEmail("");
+                setEnquiry("");
+                setEnquiryReason("");
+            }
         } catch (error) {
-            console.warn(error);
+            console.log(error);
         }
 
         // ------------------------------------------- //
         // Continue Next Adding a Success Notification //
         // ------------------------------------------- //
-
-        setFullName("");
-        setEmail("");
-        setEnquiry("");
-        setEnquiryReason("");
     };
 
     return (
