@@ -28,7 +28,7 @@ export default async function handler(req, res) {
                     <hr style="border:1px solid #333;" />
 
                     <p style="font-size:12px; color:#888;">
-                    This message was sent from your portfolio contact form.
+                    This message was sent from your developer portfolio contact form.
                     </p>
 
                 </div>
