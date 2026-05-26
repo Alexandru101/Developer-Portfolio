@@ -14,7 +14,7 @@ export default async function handler(req, res) {
         const data = await resend.emails.send({
             from: "Contact Form Submission <onboarding@resend.dev>",
             to: "alexandru_dev15@proton.me",
-            subject: `Portfolio Contact - ${enquiry}`,
+            subject: `Enquiry: ${enquiry}`,
             html: `
                 <div style="background-color:#000000; color:#ffffff; padding:20px; font-family: Arial, sans-serif;">
                     
