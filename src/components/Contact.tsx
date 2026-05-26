@@ -26,10 +26,14 @@ function Contact() {
             });
 
             const data = await response.json();
-            console.log(data);
+            console.warn(data);
         } catch (error) {
-            console.log(`Error: ${error}`);
+            console.warn(error);
         }
+
+        // ------------------------------------------- //
+        // Continue Next Adding a Success Notification //
+        // ------------------------------------------- //
 
         setFullName("");
         setEmail("");
