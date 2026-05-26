@@ -13,7 +13,7 @@ function Navbar() {
                 <FaGithub className="nav-icons" style={{ fontSize: "40px" }} title="Github Profile"/>
             </a>
 
-            <div style={{ fontWeight: "bold", fontSize: "20px" }}>Deveolper Portfolio</div>
+            <div style={{ fontWeight: "bold", fontSize: "20px" }}>Developer Portfolio</div>
 
             <div>
                 <Link to="/projects">
