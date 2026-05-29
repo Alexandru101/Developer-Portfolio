@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
     const [fullName, setFullName] = useState("");
@@ -31,19 +33,21 @@ function Contact() {
                 setEmail("");
                 setEnquiry("");
                 setEnquiryReason("");
+
+                toast.success("Form submitted successfully");
+            } else {
+                toast.error("Failed to submit form");
             }
         } catch (error) {
             console.log(error);
         }
-
-        // ------------------------------------------- //
-        // Continue Next Adding a Success Notification //
-        // ------------------------------------------- //
     };
 
     return (
         <div id="contact-container">
             <span style={contactTitle}>Get in Touch</span>
+            
+            <ToastContainer position="top-right" theme="dark" autoClose={3000} />
 
             <form id="contact-section" onSubmit={submitHandler}>
                 <div className="contact-form-content">

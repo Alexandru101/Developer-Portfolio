@@ -314,3 +314,15 @@ body {
     transform: scale(0.99);
     background: #5ce70c;
 }
+
+#notification {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+    background: #00ff4c;
+    color: black;
+    border-radius: 5px;
+    
+    padding: 10px;
+}
