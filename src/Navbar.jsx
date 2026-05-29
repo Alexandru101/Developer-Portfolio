@@ -17,7 +17,7 @@ function Navbar() {
 
             <div>
                 <Link to="/projects">
-                    <FaFolder className="nav-icons" title="Projects" />
+                    {/* <FaFolder className="nav-icons" title="Projects" /> */}
                 </Link>
 
                 <Link to="/about">
