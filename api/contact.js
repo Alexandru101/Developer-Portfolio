@@ -1,6 +1,5 @@
 import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
-console.log(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -25,6 +24,7 @@ export default async function handler(req, res) {
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Enquiry:</strong> ${enquiry}</p>
                     <p><strong>Enquiry Reason:</strong> ${enquiryReason}</p>
+                    ${process.env.RESEND_API_KEY)
 
                     <hr style="border:1px solid #333;" />
 
