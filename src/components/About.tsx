@@ -29,18 +29,18 @@ function About() {
                 </div>
  
                 <div className="about-section">
-                    <span style={textStyle1}>Main Stack:</span>
-                    <span style={centerTextAdjust}>HTML5, CSS, Javascript/Typescript, React + Node</span>
+                    <span style={textStyle1}>Frontend:</span>
+                    <span style={centerTextAdjust}>HTML5, CSS, Typescript, React</span>
                 </div>
 
                 <div className="about-section">
                     <span style={textStyle1}>Backend:</span>
-                    <span style={centerTextAdjust}>Node.js, Express</span>
+                    <span style={centerTextAdjust}>Node.js, Express + Mongodb</span>
                 </div>
 
                 <div className="about-section">
                     <span style={textStyle1}>Database:</span>
-                    <span style={centerTextAdjust}>Supabase</span>
+                    <span style={centerTextAdjust}>Supabase and Mongodb</span>
                 </div>
 
                 <div className="about-section">
@@ -57,7 +57,7 @@ function About() {
                 <div id="about-description-container">
                     <text style={{ fontSize: "14px"}}>
                         I am an aspiring web developer eager to enter the job market and contribute to real projects designed for public use,
-                        while continuing to expand my proficiency with JavaScript and modern web development frameworks. I am always enthusiastic
+                        while continuing to expand my proficiency with Typescript and modern web development frameworks. I am always enthusiastic
                         about learning and working with different frameworks aswell as imrpoving my programming ability.
                     </text>
 
@@ -66,13 +66,13 @@ function About() {
                     <text style={{ fontSize: "14px"}}>
                         I have completed projects
                         using Next.js, React Native, and Express. to expand my ability, While I am not yet fully proficient, I am actively advancing
-                        my skills in JavaScript through a series of diffrent projects working with things such as "Data", "Frontend", "Backend" and more.
+                        my skills in full-stack devolpment through a series of diffrent projects working with things such as "Data", "Frontend", "Backend" and more.
                     </text>
 
                     <br></br><br></br>
 
                     <text style={{ fontSize: "14px"}}>
-                        As of the creation of this portfolio, I am focusing exclusively on JavaScript, React, and Node.js/Express
+                        As of the creation of this portfolio, I am focusing exclusively on Typescript, React, and Node.js/Express with mongodb
                         to deepen my experience in building full-stack applications with robust front-end and back-end functionality.
                         This focus is also intended to prepare me to become job-ready and capable of contributing effectively in a professional work environment.
                     </text>
