@@ -30,7 +30,7 @@ function About() {
  
                 <div className="about-section">
                     <span style={textStyle1}>Main Stack:</span>
-                    <span style={centerTextAdjust}>HTML5, CSS, Javascript, React, Next.js</span>
+                    <span style={centerTextAdjust}>HTML5, CSS, Javascript/Typescript, React + Node</span>
                 </div>
 
                 <div className="about-section">
