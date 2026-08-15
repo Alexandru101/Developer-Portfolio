@@ -6,4 +6,4 @@ export default function Home() {
     )
 };
 
-// Next: Finish designing home paage
+// Next: Finish designing home page
