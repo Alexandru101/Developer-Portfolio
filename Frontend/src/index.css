@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: 0;
 }
+
+:root {
+    --dark-purple-background: #0f0a1a;
+    --light-dark-purple-background: #181025;
+}

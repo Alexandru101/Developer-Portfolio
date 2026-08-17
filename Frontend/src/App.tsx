@@ -1,7 +1,6 @@
 // Modules //
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import "./App.css";
 
 // Layouts //
 import MainLayout from "./layouts/MainLayout";

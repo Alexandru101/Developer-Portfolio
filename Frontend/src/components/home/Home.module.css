@@ -1,0 +1,67 @@
+.page {
+    min-height: 100svh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    background: var(--dark-purple-background);
+}
+
+/* ------ */
+/* Header */
+/* ------ */
+
+.profile {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.avatar {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid #2a4e7cb7;
+    border-radius: 50%;
+    object-fit: cover;
+
+    background: var(--light-dark-purple-background);
+    opacity: 0.8;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.description {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* ------- */
+/* Content */
+/* ------- */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glowLine {
+    height: 0.0625rem;
+    width: 4rem;
+    background: #8b5cf6;
+    
+    box-shadow:
+        0 0 5px #5ac8ff,
+        0 0 10px #2196f3,
+        0 0 15px #0077ff;
+}
