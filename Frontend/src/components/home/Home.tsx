@@ -1,8 +1,9 @@
 // Modules //
 import styles from "./Home.module.css";
 
-// Images //
+// Images + Icons //
 import avatar from "../../assets/avatar.png";
+import { LuLayers3, LuBriefcaseBusiness, LuUserRound, LuMail } from "react-icons/lu";
 
 // Rendering Page //
 export default function Home() {
@@ -20,11 +21,38 @@ export default function Home() {
                 </p>
             </div>
 
-            <div className={styles.navigation}>
+            <nav className={styles.navigation}>
                 <span className={styles.glowLine} />
-            </div>
+
+                <div className={styles.navigation__options}>
+                    <a className={styles["navigation__options-card"]}>
+                        <span className={styles.card__icon}>{"</>"}</span>
+                        <span className={styles.card__text}>Projects</span>
+                    </a>
+
+                    <a className={styles["navigation__options-card"]}>
+                        <LuLayers3 className={styles.card__icon}/>
+                        <span className={styles.card__text}>Skills</span>
+                    </a>
+
+                    <a className={styles["navigation__options-card"]}>
+                        <LuBriefcaseBusiness className={styles.card__icon} />
+                        <span className={styles.card__text}>Experience</span>
+                    </a>
+
+                    <a className={styles["navigation__options-card"]}>
+                        <LuUserRound className={styles.card__icon} />
+                        <span className={styles.card__text}>About</span>
+                    </a>
+
+                    <a className={styles["navigation__options-card"]}>
+                        <LuMail className={styles.card__icon} />
+                        <span className={styles.card__text}>Contact</span>
+                    </a>
+                </div>
+            </nav>
         </div>
     )
 };
 
-// Next: Finish designing page options
+// Next: Finish landing page about me and scroll down design
