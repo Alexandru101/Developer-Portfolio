@@ -146,8 +146,7 @@
 
 .scroll {
     display: none;
-    position: fixed;
-    bottom: 2rem;
+    margin-top: 3rem;
 }
 
 .scroll__text {
