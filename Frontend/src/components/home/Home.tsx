@@ -88,7 +88,12 @@ export default function Home() {
             {/* ---------------- */}
 
             <section id="about" className={styles.about}>
-
+                <div className={styles.about__leftSide}>
+                    <div className={styles.about__title}>
+                        <h2 className={styles["about__title-text"]}>ABOUT ME</h2>
+                        <span className={styles["about__title-underline"]} />
+                    </div>
+                </div>
             </section>
         </div>
     )

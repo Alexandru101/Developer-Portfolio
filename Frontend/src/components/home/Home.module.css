@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5rem 0;
 }
 
 /* ------ */
@@ -182,6 +183,36 @@
 /* About me section */
 /* ---------------- */
 
+.about__leftSide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.about__title-text {
+    color: #3a7fff;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.about__title-underline {
+    height: 0.15rem;
+    width: 9rem;
+    border-radius: 10px;
+    background: #3a7fff;
+    box-shadow: 0 0 7px #3a8fff;
+}
+
 /* --------------------- */
 /* Desktop Compatibility */
 /* --------------------- */
@@ -238,5 +269,17 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    /* ---------------- */
+    /* About me section */
+    /* ---------------- */
+
+    .about__leftSide {
+        width: 50%;
+    }
+
+    .about__title {
+        align-items: flex-start;
     }
 }
