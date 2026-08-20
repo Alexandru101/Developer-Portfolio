@@ -35,27 +35,27 @@ export default function Home() {
                     <span className={styles.glowLine} />
 
                     <div className={styles.navigation__options}>
-                        <Link to="/projects" className={styles.navigation__card}>
+                        <Link to="/" className={styles.navigation__card}>
                             <span className={styles.card__icon}>{"</>"}</span>
                             <span className={styles.card__text}>Projects</span>
                         </Link>
 
-                        <Link to="/skills" className={styles.navigation__card}>
+                        <Link to="/" className={styles.navigation__card}>
                             <LuLayers3 className={styles.card__icon}/>
                             <span className={styles.card__text}>Skills</span>
                         </Link>
 
-                        <Link to="/experience" className={styles.navigation__card}>
+                        <Link to="/" className={styles.navigation__card}>
                             <LuBriefcaseBusiness className={styles.card__icon} />
                             <span className={styles.card__text}>Experience</span>
                         </Link>
 
-                        <Link to="/about" className={styles.navigation__card}>
+                        <a href="#about" className={styles.navigation__card}>
                             <LuUserRound className={styles.card__icon} />
                             <span className={styles.card__text}>About</span>
-                        </Link>
+                        </a>
 
-                        <Link to="/contact" className={styles.navigation__card}>
+                        <Link to="/" className={styles.navigation__card}>
                             <LuMail className={styles.card__icon} />
                             <span className={styles.card__text}>Contact</span>
                         </Link>
@@ -87,8 +87,8 @@ export default function Home() {
             {/* About me section */}
             {/* ---------------- */}
 
-            <section className="about">
-                
+            <section id="about" className={styles.about}>
+
             </section>
         </div>
     )
