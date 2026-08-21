@@ -1,4 +1,5 @@
 // Modules //
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
@@ -8,8 +9,24 @@ import { LuLayers3, LuBriefcaseBusiness, LuUserRound, LuMail, LuMouse } from "re
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 
+// Functions //
+function loadAboutSectionFadeAnim() {
+
+    // ----------------------------------- //
+    // Next finish creating fade animation //
+    // ----------------------------------- //
+
+    useEffect(() => {
+
+    }, [])
+};
+
 // Rendering Page //
 export default function Home() {
+    loadAboutSectionFadeAnim();
+    
+
+    // Rendering HTML //
     return (
         <div className={styles.page}>
 
@@ -93,6 +110,21 @@ export default function Home() {
                         <h2 className={styles["about__title-text"]}>ABOUT ME</h2>
                         <span className={styles["about__title-underline"]} />
                     </div>
+
+                    <p className={styles.about__desc}>
+                        I build peformance-focused websites that look good,
+                        feel simple and get the job done.
+                    </p>
+
+                    <p className={styles.about__bio}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
                 </div>
             </section>
         </div>

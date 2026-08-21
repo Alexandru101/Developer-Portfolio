@@ -189,6 +189,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2.5rem;
 }
 
 .about__title {
@@ -210,7 +211,20 @@
     width: 9rem;
     border-radius: 10px;
     background: #3a7fff;
-    box-shadow: 0 0 7px #3a8fff;
+}
+
+.about__desc {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.about__bio {
+    color: #ffffffa9;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 /* --------------------- */
@@ -281,5 +295,15 @@
 
     .about__title {
         align-items: flex-start;
+    }
+
+    .about__desc {
+        text-align: left;
+        font-size: 1.75rem;
+    }
+
+    .about__bio {
+        text-align: left;
+        padding: 0;
     }
 }
