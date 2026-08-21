@@ -1,5 +1,5 @@
 // Modules //
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
@@ -10,21 +10,43 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 
 // Functions //
-function loadAboutSectionFadeAnim() {
-
-    // ----------------------------------- //
-    // Next finish creating fade animation //
-    // ----------------------------------- //
-
+function loadAboutSectionFadeAnim(aboutRef: React.RefObject<HTMLElement | null>) {
     useEffect(() => {
+        const aboutSection = aboutRef.current;
+        if (!aboutSection) return;
 
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+
+                    // ------------------------- //
+                    // Apply fade animation here //
+                    // ------------------------- //
+
+                    window.alert("component is visible")
+                    observer.unobserve(entry.target); // optional
+                }
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        observer.observe(aboutSection);
+
+        return () => {
+            observer.disconnect();
+        }
     }, [])
 };
 
 // Rendering Page //
 export default function Home() {
-    loadAboutSectionFadeAnim();
-    
+    // Declaring Variables //
+    const aboutRef = useRef<HTMLElement | null>(null);
+
+    // Loading "useEffects" //
+    loadAboutSectionFadeAnim(aboutRef);
 
     // Rendering HTML //
     return (
@@ -104,7 +126,7 @@ export default function Home() {
             {/* About me section */}
             {/* ---------------- */}
 
-            <section id="about" className={styles.about}>
+            <section ref={aboutRef} id="about" className={styles.about}>
                 <div className={styles.about__leftSide}>
                     <div className={styles.about__title}>
                         <h2 className={styles["about__title-text"]}>ABOUT ME</h2>
