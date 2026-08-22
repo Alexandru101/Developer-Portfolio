@@ -15,28 +15,24 @@ function loadAboutSectionFadeAnim(aboutRef: React.RefObject<HTMLElement | null>)
         const aboutSection = aboutRef.current;
         if (!aboutSection) return;
 
-        const observer = new IntersectionObserver(
+        const obsserver = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-
-                    // ------------------------- //
-                    // Apply fade animation here //
-                    // ------------------------- //
-
-                    window.alert("component is visible")
-                    observer.unobserve(entry.target); // optional
+                    aboutSection.classList.add(styles["about--visible"]);
+                } else {
+                    aboutSection.classList.remove(styles["about--visible"]);
                 }
             },
             {
                 threshold: 0.15
             }
-        );
+        )
 
-        observer.observe(aboutSection);
+        obsserver.observe(aboutSection);
 
         return () => {
-            observer.disconnect();
-        }
+            obsserver.disconnect();
+        };
     }, [])
 };
 
