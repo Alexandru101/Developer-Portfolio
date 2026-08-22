@@ -10,17 +10,25 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 
 // Functions //
-function loadAboutSectionFadeAnim(aboutRef: React.RefObject<HTMLElement | null>) {
+function loadAboutSectionFadeAnim(
+    aboutRef: React.RefObject<HTMLElement | null>,
+    aboutSectionLeftRef: React.RefObject<HTMLDivElement | null>,
+    aboutSectionRightRef: React.RefObject<HTMLDivElement | null>
+) {
     useEffect(() => {
         const aboutSection = aboutRef.current;
-        if (!aboutSection) return;
+        const aboutSectionLeft = aboutSectionLeftRef.current;
+        const aboutSectionRight = aboutSectionRightRef.current;
+        if (!aboutSection || !aboutSectionLeft || !aboutSectionRight) return;
 
         const obsserver = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    aboutSection.classList.add(styles["about--visible"]);
+                    aboutSectionLeft.classList.add(styles["about--visible"]);
+                    aboutSectionRight.classList.add(styles["about--visible"]);
                 } else {
-                    aboutSection.classList.remove(styles["about--visible"]);
+                    aboutSectionLeft.classList.remove(styles["about--visible"]);
+                    aboutSectionRight.classList.remove(styles["about--visible"]);
                 }
             },
             {
@@ -40,9 +48,11 @@ function loadAboutSectionFadeAnim(aboutRef: React.RefObject<HTMLElement | null>)
 export default function Home() {
     // Declaring Variables //
     const aboutRef = useRef<HTMLElement | null>(null);
+    const aboutSectionLeftRef = useRef<HTMLDivElement | null>(null);
+    const aboutSectionRightRef = useRef<HTMLDivElement | null>(null);
 
     // Loading "useEffects" //
-    loadAboutSectionFadeAnim(aboutRef);
+    loadAboutSectionFadeAnim(aboutRef, aboutSectionLeftRef, aboutSectionRightRef);
 
     // Rendering HTML //
     return (
@@ -123,7 +133,7 @@ export default function Home() {
             {/* ---------------- */}
 
             <section ref={aboutRef} id="about" className={styles.about}>
-                <div className={styles.about__leftSide}>
+                <div ref={aboutSectionLeftRef} className={styles.about__leftSide}>
                     <div className={styles.about__title}>
                         <h2 className={styles["about__title-text"]}>ABOUT ME</h2>
                         <span className={styles["about__title-underline"]} />
@@ -143,6 +153,17 @@ export default function Home() {
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                         deserunt mollit anim id est laborum.
                     </p>
+                </div>
+
+                <div ref={aboutSectionRightRef} className={styles.about__rightSide}>
+                    <div className={styles.editor}>
+                        
+                        {/* <-- Header */}
+
+                        {/* <-- Body */}
+
+                        {/* <-- Footer */}
+                    </div>
                 </div>
             </section>
         </div>
